@@ -63,12 +63,6 @@ if __name__ == "__main__":
         print("✅ Post generated successfully!")
         result = post_to_facebook(message)
         print(f"✅ Post published! Post ID: {result.get('id')}")
-        url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
-        payload = {
-            "chat_id": CHANNEL_USERNAME,
-            "text": message
-        }
-        response = requests.post(url, data=payload)
 
     except Exception as e:
         print(f"❌ Error: {e}")
