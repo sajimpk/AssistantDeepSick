@@ -27,4 +27,4 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           CHANNEL_USERNAME: ${{ secrets.CHANNEL_USERNAME }}
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
-        run: python app.py
+        run: python test.py
