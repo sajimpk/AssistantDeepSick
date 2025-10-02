@@ -20,18 +20,22 @@ client = OpenAI(
 def generate_post():
     prompt = """ তুমি একজন motivational content creator। তুমি “Hey You” নামের ফেসবুক পেজের জন্য শর্ট, স্টাইলিশ, বাংলা motivational quote লিখবে। প্রতিটি কোটস ১–৩ লাইন হবে, সহজ, সরল এবং সহজেই relatable।
 
-    থিম হতে পারে: life lesson, self-improvement, positive thinking, perseverance, success, mindset ইত্যাদি।
+থিম হতে পারে: life lesson, self-improvement, positive thinking, perseverance, success, mindset ইত্যাদি।
 
-    প্রতিটি কোটসে 2-4 করে ইমোজি ব্যবহার করা যাবে।
+প্রতিটি কোটসে ২–৪টি ইমোজি ব্যবহার করতে হবে।
 
-    প্রতিবার কেবল একটি কোটস দাও।
+প্রতিবার শুধু একটি নতুন কোটস দেবে।
 
-    কোটসটি পড়ার পর মানুষ প্রেরণা বা positive energy অনুভব করবে।
+কোটসটি পড়ার পর মানুষ যেন প্রেরণা বা positive energy অনুভব করে।
 
-    লাইক করা বা শেয়ার করার মতো catchy এবং স্টাইলিশ হোক।
+কোটস যেন লাইক বা শেয়ার করার মতো catchy এবং স্টাইলিশ হয়।
 
-    - 3-5 viral hashtag: include (#hyeyou)
-    ⚠️ Only return the post content."""
+শেষে ৩–৫টি ভাইরাল হ্যাশট্যাগ দাও, যেখানে অবশ্যই #hyeyou থাকবে।
+
+❌ শর্ত: আগের দেওয়া কোটসের সাথে কোনোভাবেই মিল থাকবে না (শব্দ, ইমোজি, স্টাইল সব আলাদা হতে হবে)।
+
+
+⚠️ Only return the post content."""
     completion = client.chat.completions.create(
     extra_headers={
         "HTTP-Referer": "sajim.com", 
